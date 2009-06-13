@@ -12,8 +12,10 @@ URL:		http://unkart.ovh.org/ncmpcpp/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	curl-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel
+BuildRequires:	taglib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +34,6 @@ plików lokalnych oraz inne drobne udogodnienia.
 %prep
 %setup -q
 %patch0 -p1
-%{__sed} -i -e 's,curses.h,ncurses/curses.h,g' src/window.h
 
 %build
 %{__libtoolize}
