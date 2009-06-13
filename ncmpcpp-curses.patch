@@ -1,0 +1,12 @@
+diff -burNp ncmpcpp-0.3.4/configure.in ncmpcpp-0.3.4-dud/configure.in
+--- ncmpcpp-0.3.4/configure.in	2009-05-19 16:17:00.000000000 +0200
++++ ncmpcpp-0.3.4-dud/configure.in	2009-06-13 21:37:38.031114997 +0200
+@@ -81,7 +81,7 @@ fi
+ if test "$pdcurses" != "no" ; then
+ 	AC_CHECK_LIB($curses_lib, Xinitscr, AC_DEFINE([XCURSES], [1], [x11 pdcurses available]), )
+ fi
+-AC_CHECK_HEADERS([curses.h], , AC_MSG_ERROR([missing ncurses.h header]))
++AC_CHECK_HEADERS([ncurses/curses.h], , AC_MSG_ERROR([missing ncurses.h header]))
+ 
+ dnl =================================
+ dnl = checking for curl and pthread =
