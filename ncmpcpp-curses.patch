@@ -1,12 +1,11 @@
-diff -burNp ncmpcpp-0.3.4/configure.in ncmpcpp-0.3.4-dud/configure.in
---- ncmpcpp-0.3.4/configure.in	2009-05-19 16:17:00.000000000 +0200
-+++ ncmpcpp-0.3.4-dud/configure.in	2009-06-13 21:37:38.031114997 +0200
-@@ -81,7 +81,7 @@ fi
- if test "$pdcurses" != "no" ; then
- 	AC_CHECK_LIB($curses_lib, Xinitscr, AC_DEFINE([XCURSES], [1], [x11 pdcurses available]), )
- fi
--AC_CHECK_HEADERS([curses.h], , AC_MSG_ERROR([missing ncurses.h header]))
-+AC_CHECK_HEADERS([ncurses/curses.h], , AC_MSG_ERROR([missing ncurses.h header]))
- 
- dnl =================================
- dnl = checking for curl and pthread =
+--- ncmpcpp-0.3.5/configure.in.orig	2009-07-25 14:46:22.000000000 +0200
++++ ncmpcpp-0.3.5/configure.in	2009-07-25 14:47:05.000000000 +0200
+@@ -60,7 +60,7 @@
+ if test "$pdcurses" = "no" ; then
+ 	pdcurses=XCurses
+ 	if test "$unicode" = "yes" ; then
+-		curses_config_bin=ncursesw5-config
++		curses_config_bin=ncursesw6-config
+ 		curses_lib=ncursesw
+ 		AC_DEFINE([_UTF8], [1], [enables unicode support])
+ 	else
