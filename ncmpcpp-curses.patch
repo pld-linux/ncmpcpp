@@ -5,7 +5,7 @@
  	pdcurses=XCurses
  	if test "$unicode" = "yes" ; then
 -		curses_config_bin=ncursesw5-config
-+		curses_config_bin=ncursesw6-config
++		test -f /usr/bin/ncursesw6-config && curses_config_bin=ncursesw6-config || curses_config_bin=ncursesw5-config
  		curses_lib=ncursesw
  		AC_DEFINE([_UTF8], [1], [enables unicode support])
  	else
