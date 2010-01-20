@@ -1,11 +1,12 @@
---- ncmpcpp-0.3.5/configure.in.orig	2009-07-25 14:46:22.000000000 +0200
-+++ ncmpcpp-0.3.5/configure.in	2009-07-25 14:47:05.000000000 +0200
-@@ -60,7 +60,7 @@
+diff -burNp ncmpcpp-0.5/configure.in ncmpcpp-0.5-dud/configure.in
+--- ncmpcpp-0.5/configure.in	2009-12-31 12:05:21.000000000 +0100
++++ ncmpcpp-0.5-dud/configure.in	2010-01-19 23:18:00.560552245 +0100
+@@ -93,7 +93,7 @@ dnl = checking for ncurses =
+ dnl ========================
  if test "$pdcurses" = "no" ; then
- 	pdcurses=XCurses
  	if test "$unicode" = "yes" ; then
 -		curses_config_bin=ncursesw5-config
-+		test -f /usr/bin/ncursesw6-config && curses_config_bin=ncursesw6-config || curses_config_bin=ncursesw5-config
- 		curses_lib=ncursesw
++	test -f /usr/bin/ncursesw6-config && curses_config_bin=ncursesw6-config || curses_config_bin=ncursesw5-config
  		AC_DEFINE([_UTF8], [1], [enables unicode support])
  	else
+ 		curses_config_bin=ncurses5-config
