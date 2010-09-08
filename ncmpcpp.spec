@@ -1,13 +1,12 @@
 Summary:	ncurses mpd client inspired by ncmpc
 Summary(pl.UTF-8):	klient mpd wzorowany na ncmpc
 Name:		ncmpcpp
-Version:	0.5.4
+Version:	0.5.5
 Release:	1
 License:	GPL v2
 Group:		Applications
 Source0:	http://unkart.ovh.org/ncmpcpp/%{name}-%{version}.tar.bz2
-# Source0-md5:	feb35e16a286b15ce066b7f13263be27
-Patch0:		%{name}-curses.patch
+# Source0-md5:	30cded976c81bba4c8a2daf2215fe41d
 URL:		http://unkart.ovh.org/ncmpcpp/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -35,7 +34,6 @@ plików lokalnych oraz inne drobne udogodnienia.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
