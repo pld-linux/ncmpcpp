@@ -16,6 +16,7 @@ BuildRequires:	libmpdclient-devel >= 2.1
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel
+BuildRequires:	pkgconfig
 BuildRequires:	taglib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
