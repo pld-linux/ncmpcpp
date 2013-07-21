@@ -5,9 +5,9 @@ Version:	0.5.10
 Release:	2
 License:	GPL v2
 Group:		Applications
-Source0:	http://unkart.ovh.org/ncmpcpp/%{name}-%{version}.tar.bz2
+Source0:	http://ncmpcpp.rybczak.net/stable/%{name}-%{version}.tar.bz2
 # Source0-md5:	298ed66325bcfe358e37e186c7ea4861
-URL:		http://unkart.ovh.org/ncmpcpp/
+URL:		http://ncmpcpp.rybczak.net
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	curl-devel
