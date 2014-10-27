@@ -1,22 +1,25 @@
 Summary:	ncurses mpd client inspired by ncmpc
 Summary(pl.UTF-8):	klient mpd wzorowany na ncmpc
 Name:		ncmpcpp
-Version:	0.5.10
-Release:	2
+Version:	0.6
+Release:	1
 License:	GPL v2
 Group:		Applications
 Source0:	http://ncmpcpp.rybczak.net/stable/%{name}-%{version}.tar.bz2
-# Source0-md5:	298ed66325bcfe358e37e186c7ea4861
+# Source0-md5:	8b041b4695686bd0e959e164edf1b01b
 URL:		http://ncmpcpp.rybczak.net
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
+BuildRequires:	boost-devel
 BuildRequires:	curl-devel
 BuildRequires:	fftw3-devel
-BuildRequires:	libmpdclient-devel >= 2.1
+BuildRequires:	gcc-c++ >= 6:4.6
+BuildRequires:	libmpdclient-devel >= 2.8
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel
 BuildRequires:	pkgconfig
+BuildRequires:	readline-devel
 BuildRequires:	taglib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -43,7 +46,11 @@ plików lokalnych oraz inne drobne udogodnienia.
 %{__autoheader}
 %{__automake}
 %configure \
-	--enable-outputs
+	BOOST_LIB_SUFFIX="" \
+	--enable-clock \
+	--enable-outputs \
+	--enable-unicode \
+	--enable-visualizer
 %{__make}
 
 %install
@@ -60,6 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING NEWS doc/config doc/keys
+%doc AUTHORS COPYING NEWS doc/bindings doc/config
 %attr(755,root,root) %{_bindir}/ncmpcpp
 %{_mandir}/man1/ncmpcpp.1*
