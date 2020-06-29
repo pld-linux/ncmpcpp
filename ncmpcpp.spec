@@ -7,6 +7,7 @@ License:	GPL v2
 Group:		Applications
 Source0:	http://ncmpcpp.rybczak.net/stable/%{name}-%{version}.tar.bz2
 # Source0-md5:	af161ee347d92e7077c42ea8ad4865ec
+Patch0:		gcc10.patch
 URL:		http://ncmpcpp.rybczak.net
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
@@ -38,6 +39,7 @@ plików lokalnych oraz inne drobne udogodnienia.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
