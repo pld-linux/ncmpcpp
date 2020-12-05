@@ -19,6 +19,7 @@ BuildRequires:	libmpdclient-devel >= 2.8
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel
+BuildRequires:	ncurses-ext-devel
 BuildRequires:	pkgconfig
 BuildRequires:	readline-devel
 BuildRequires:	taglib-devel
