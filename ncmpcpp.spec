@@ -1,13 +1,12 @@
 Summary:	ncurses mpd client inspired by ncmpc
 Summary(pl.UTF-8):	klient mpd wzorowany na ncmpc
 Name:		ncmpcpp
-Version:	0.8.2
-Release:	6
+Version:	0.9
+Release:	1
 License:	GPL v2
 Group:		Applications
 Source0:	http://ncmpcpp.rybczak.net/stable/%{name}-%{version}.tar.bz2
-# Source0-md5:	af161ee347d92e7077c42ea8ad4865ec
-Patch0:		gcc10.patch
+# Source0-md5:	36b0723294d6265906272b5fdec9dd1e
 URL:		http://ncmpcpp.rybczak.net
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
@@ -40,7 +39,6 @@ plików lokalnych oraz inne drobne udogodnienia.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -70,6 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING NEWS doc/bindings doc/config
+%doc AUTHORS CHANGELOG.md COPYING doc/bindings doc/config
 %attr(755,root,root) %{_bindir}/ncmpcpp
 %{_mandir}/man1/ncmpcpp.1*
