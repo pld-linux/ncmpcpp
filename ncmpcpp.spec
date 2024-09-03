@@ -1,21 +1,21 @@
 Summary:	ncurses mpd client inspired by ncmpc
 Summary(pl.UTF-8):	klient mpd wzorowany na ncmpc
 Name:		ncmpcpp
-Version:	0.9.2
-Release:	6
+Version:	0.10
+Release:	1
 License:	GPL v2
 Group:		Applications
-Source0:	http://ncmpcpp.rybczak.net/stable/%{name}-%{version}.tar.bz2
-# Source0-md5:	3dcd9bd956aad193ef254e62ebacdc16
-URL:		http://ncmpcpp.rybczak.net
-BuildRequires:	autoconf >= 2.59
+Source0:	https://github.com/ncmpcpp/ncmpcpp/archive/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	0a51d4189fea2592f07c9acaac5e6c17
+URL:		https://github.com/ncmpcpp/ncmpcpp
+BuildRequires:	autoconf >= 2.71
 BuildRequires:	automake
 BuildRequires:	boost-devel
 BuildRequires:	curl-devel
 BuildRequires:	fftw3-devel
 BuildRequires:	gcc-c++ >= 6:4.6
 BuildRequires:	libmpdclient-devel >= 2.8
-BuildRequires:	libstdc++-devel
+BuildRequires:	libstdc++-devel >= 6:10
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel
 BuildRequires:	ncurses-ext-devel
