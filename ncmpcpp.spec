@@ -50,7 +50,6 @@ plików lokalnych oraz inne drobne udogodnienia.
 	BOOST_LIB_SUFFIX="" \
 	--enable-clock \
 	--enable-outputs \
-	--enable-unicode \
 	--enable-visualizer
 %{__make}
 
